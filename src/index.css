@@ -1,0 +1,17 @@
+@import "components/auth/signup-page/signup-page.css";
+@import "components/auth/login-page/login-page.css";
+
+.button {
+    background-color: white;
+    border: 2px solid;
+    border-radius: 25px;
+}
+.button--active {
+    background: linear-gradient(180deg, rgba(245, 78, 249, 0.47) 0%, #6F4DF5 100%);
+    border: none;
+    color: white;
+}
+
+
+
+
