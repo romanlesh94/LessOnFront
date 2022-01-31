@@ -1,10 +1,22 @@
 import React from "react";
 import back from "../../../assets/login-back.jpg";
+import {Link} from "react-router-dom";
+import logo from "../../../assets/lesson-logo.svg";
 
 class LoginPage extends React.Component {
     render() {
         return (
+
             <div className="login-wrapper">
+
+                <div className="navbar">
+                    <ul className="navbar-list">
+                        <li className="logo"><Link to="/"><img src={logo} alt="logo"/></Link></li>
+                        <li><Link to="/log-in">Log in</Link></li>
+                        <li><Link to="/sign-up">Sign up</Link></li>
+                    </ul>
+                </div>
+
                 <div className="login-cover">
                     <h1 className="login-cover__title">Log in to your account</h1>
                     <p className="login-cover__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.

@@ -1,10 +1,20 @@
 import React from "react";
 import back from '../../../assets/sign-back.jpg';
+import {Link} from "react-router-dom";
+import logo from '../../../assets/lesson-logo.svg';
 
 class SignupPage extends React.Component {
     render() {
         return (
             <div className="sign-wrapper">
+
+                <div className="navbar">
+                    <ul className="navbar-list">
+                        <li className="logo"><Link to="/"><img src={logo} alt="logo"/></Link></li>
+                        <li><Link to="/log-in">Log in</Link></li>
+                        <li><Link to="/sign-up">Sign up</Link></li>
+                    </ul>
+                </div>
 
                 <div className="sign-cover">
                     <h1 className="sign-cover__title">Enter your personal data</h1>
