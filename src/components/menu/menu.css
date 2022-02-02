@@ -56,4 +56,26 @@
     border-radius: 50%;
     margin-left: 20px;
     object-fit: cover;
+    border: 3px solid #f9f9f9;
+}
+
+@media (max-width: 1140px) {
+    .search {
+        width: 300px;
+    }
+}
+
+@media (max-width: 960px) {
+    .menu {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 720px) {
+    .search {
+        display: none;
+    }
+    .menu {
+        padding: 0 20px;
+    }
 }

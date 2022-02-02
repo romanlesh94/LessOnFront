@@ -23,6 +23,21 @@ function App() {
                     <HomePage/>
                 </Route>
 
+                <Route path="/lessons">
+                    <HomePage/>
+                </Route>
+
+                <Route path="/classroom">
+                    <HomePage/>
+                </Route>
+
+                <Route path="/articles">
+                    <HomePage/>
+                </Route>
+
+                <Route path="/browse">
+                    <HomePage/>
+                </Route>
             </Switch>
 
         </Router>
