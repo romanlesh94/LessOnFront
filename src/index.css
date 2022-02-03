@@ -2,6 +2,8 @@
 @import "components/auth/login-page/login-page.css";
 @import "components/menu/menu.css";
 @import "components/sidebar/sidebar.css";
+@import "components/lessons/unit/unit.css";
+@import "components/lessons/lesson/lesson.css";
 
 * {
     box-sizing: border-box;
@@ -18,6 +20,29 @@
     color: white;
 }
 
+.wrapper {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 100px 1fr;
+    width: 100%;
+    height: 100vh;
+}
+.menu-container {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.sidebar-container {
+    grid-row-start: 2;
+}
+.container {
+    grid-row-start: 2;
+    padding: 50px;
+}
 
+@media (max-width: 960px) {
+    .wrapper {
+        grid-template-columns: 80px 1fr;
+    }
+}
 
 

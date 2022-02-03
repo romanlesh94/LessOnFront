@@ -1,9 +1,9 @@
-import React from 'react';
-import Menu from './menu/Menu';
-import Sidebar from "./sidebar/sidebar";
+import React from "react";
+import Menu from "../../menu/Menu";
+import Sidebar from "../../sidebar/sidebar";
+import Lesson from "./lesson";
 
-
-class HomePage extends React.Component {
+class LessonPage extends React.Component {
     render() {
         return (
             <div className="wrapper">
@@ -14,11 +14,11 @@ class HomePage extends React.Component {
                     <Sidebar/>
                 </div>
                 <div className="container">
-
+                    <Lesson/>
                 </div>
             </div>
         )
     }
 }
 
-export default HomePage;
+export default LessonPage;

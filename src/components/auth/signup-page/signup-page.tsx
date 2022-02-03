@@ -1,6 +1,6 @@
 import React from "react";
 import back from '../../../assets/sign-back.jpg';
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import logo from '../../../assets/lesson-logo.svg';
 
 class SignupPage extends React.Component {
@@ -10,9 +10,9 @@ class SignupPage extends React.Component {
 
                 <div className="navbar">
                     <ul className="navbar-list">
-                        <li className="logo"><Link to="/"><img src={logo} alt="logo"/></Link></li>
-                        <li><Link to="/log-in">Log in</Link></li>
-                        <li><Link to="/sign-up">Sign up</Link></li>
+                        <li className="logo"><NavLink to="/"><img src={logo} alt="logo"/></NavLink></li>
+                        <li><NavLink to="/log-in">Log in</NavLink></li>
+                        <li><NavLink to="/sign-up">Sign up</NavLink></li>
                     </ul>
                 </div>
 

@@ -13,7 +13,7 @@ class Sidebar extends React.Component {
             <div className="sidebar">
                 <div className="sidebar__list">
 
-                    <NavLink to="/lessons" className="sidebar__link" activeClassName="sidebar__link--active">
+                    <NavLink to="/units" className="sidebar__link" activeClassName="sidebar__link--active">
                         <div className="sidebar__icon-wrapper">
                             <img src={lessonsIcon} alt="lessons" className="sidebar__icon"/>
                         </div>

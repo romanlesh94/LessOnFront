@@ -2,13 +2,14 @@ import React from 'react';
 import './App.css';
 import LoginPage from "./components/auth/login-page/login-page";
 import SignupPage from "./components/auth/signup-page/signup-page";
-import './App.css'
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import HomePage from "./components/home-page";
+import UnitsPage from "./components/lessons/units-page";
+import {Switch, Route} from "react-router-dom";
+import LessonPage from "./components/lessons/lesson/lesson-page";
+
 
 function App() {
     return (
-        <Router>
 
             <Switch>
                 <Route path="/log-in">
@@ -19,12 +20,16 @@ function App() {
                     <SignupPage/>
                 </Route>
 
-                <Route path="/">
+                <Route exact path="/">
                     <HomePage/>
                 </Route>
 
-                <Route path="/lessons">
-                    <HomePage/>
+                <Route exact path="/units">
+                    <UnitsPage/>
+                </Route>
+
+                <Route exact path="/units/l1">
+                    <LessonPage/>
                 </Route>
 
                 <Route path="/classroom">
@@ -39,8 +44,6 @@ function App() {
                     <HomePage/>
                 </Route>
             </Switch>
-
-        </Router>
     );
 }
 
