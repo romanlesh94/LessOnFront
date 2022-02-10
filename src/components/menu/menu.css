@@ -1,4 +1,6 @@
 .menu-wrapper {
+    position: fixed;
+    z-index: 10000;
     width: 100vw;
     background-color: #fff;
     background: linear-gradient(270.46deg, #6F4DF5 -17.19%, rgba(245, 78, 249, 0.47) 117.02%);

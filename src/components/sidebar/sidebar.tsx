@@ -5,6 +5,8 @@ import articlesIcon from '../../assets/articles-icon.svg';
 import browseIcon from '../../assets/browse-icon.svg';
 import arrow from '../../assets/arrow-closed.svg';
 import {NavLink} from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faBookOpen, faCaretRight, faGlobe, faNewspaper, faUserCircle} from "@fortawesome/free-solid-svg-icons";
 
 
 class Sidebar extends React.Component {
@@ -15,41 +17,41 @@ class Sidebar extends React.Component {
 
                     <NavLink to="/units" className="sidebar__link" activeClassName="sidebar__link--active">
                         <div className="sidebar__icon-wrapper">
-                            <img src={lessonsIcon} alt="lessons" className="sidebar__icon"/>
+                            <FontAwesomeIcon icon={faBookOpen} />
                         </div>
                         <span className="sidebar__text">My lessons</span>
                         <div className="sidebar__icon-wrapper">
-                            <img src={arrow} alt="open" className="sidebar__arrow sidebar__arrow--closed"/>
+                            <FontAwesomeIcon icon={faCaretRight} className="sidebar__arrow"/>
                         </div>
                     </NavLink>
 
                     <NavLink to="/classroom" className="sidebar__link" activeClassName="sidebar__link--active">
                         <div className="sidebar__icon-wrapper">
-                            <img src={classroomIcon} alt="classroom" className="sidebar__icon"/>
+                            <FontAwesomeIcon icon={faUserCircle} />
                         </div>
                         <span className="sidebar__text">My classroom</span>
                         <div className="sidebar__icon-wrapper">
-                            <img src={arrow} alt="open" className="sidebar__arrow sidebar__arrow--closed"/>
+                            <FontAwesomeIcon icon={faCaretRight} className="sidebar__arrow"/>
                         </div>
                     </NavLink>
 
                     <NavLink to="/articles" className="sidebar__link" activeClassName="sidebar__link--active">
                         <div className="sidebar__icon-wrapper">
-                            <img src={articlesIcon} alt="articles" className="sidebar__icon"/>
+                            <FontAwesomeIcon icon={faNewspaper} />
                         </div>
                         <span className="sidebar__text">My articles</span>
                         <div className="sidebar__icon-wrapper">
-                            <img src={arrow} alt="open" className="sidebar__arrow sidebar__arrow--closed"/>
+                            <FontAwesomeIcon icon={faCaretRight} className="sidebar__arrow"/>
                         </div>
                     </NavLink>
 
                     <NavLink to="/browse" className="sidebar__link" activeClassName="sidebar__link--active">
                         <div className="sidebar__icon-wrapper">
-                            <img src={browseIcon} alt="browse" className="sidebar__icon"/>
+                            <FontAwesomeIcon icon={faGlobe} />
                         </div>
                         <span className="sidebar__text">Browse</span>
                         <div className="sidebar__icon-wrapper">
-                            <img src={arrow} alt="open" className="sidebar__arrow sidebar__arrow--closed"/>
+                            <FontAwesomeIcon icon={faCaretRight} className="sidebar__arrow"/>
                         </div>
                     </NavLink>
 

@@ -6,7 +6,7 @@ import HomePage from "./components/home-page";
 import UnitsPage from "./components/lessons/units-page";
 import {Switch, Route} from "react-router-dom";
 import LessonPage from "./components/lessons/lesson/lesson-page";
-
+import CardsPage from "./components/lessons/exercises/cards-page";
 
 function App() {
     return (
@@ -30,6 +30,10 @@ function App() {
 
                 <Route exact path="/units/l1">
                     <LessonPage/>
+                </Route>
+
+                <Route exact path="/units/l1/set1">
+                    <CardsPage/>
                 </Route>
 
                 <Route path="/classroom">

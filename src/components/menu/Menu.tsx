@@ -7,7 +7,6 @@ import user from "../../assets/user.jpeg";
 class Menu extends React.Component {
     render() {
         return (
-
             <div className="menu-wrapper">
                 <div className="menu">
                     <Link to="/"><img src={logo} alt="logo"/></Link>

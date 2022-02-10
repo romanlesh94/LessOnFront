@@ -4,6 +4,7 @@
 @import "components/sidebar/sidebar.css";
 @import "components/lessons/unit/unit.css";
 @import "components/lessons/lesson/lesson.css";
+@import "components/lessons/exercises/cards.css";
 
 * {
     box-sizing: border-box;
@@ -36,7 +37,7 @@
 }
 .container {
     grid-row-start: 2;
-    padding: 50px;
+    padding: 40px;
 }
 
 @media (max-width: 960px) {
