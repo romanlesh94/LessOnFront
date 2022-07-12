@@ -1,12 +1,7 @@
 import React from 'react';
-import lessonsIcon from '../../assets/lessons-icon.svg';
-import classroomIcon from '../../assets/classroom-icon.svg';
-import articlesIcon from '../../assets/articles-icon.svg';
-import browseIcon from '../../assets/browse-icon.svg';
-import arrow from '../../assets/arrow-closed.svg';
 import {NavLink} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faBookOpen, faCaretRight, faGlobe, faNewspaper, faUserCircle} from "@fortawesome/free-solid-svg-icons";
+import {faBookOpen, faCaretRight, faGlobe, faNewspaper, faUserCircle, faUsers} from "@fortawesome/free-solid-svg-icons";
 
 
 class Sidebar extends React.Component {
@@ -27,7 +22,7 @@ class Sidebar extends React.Component {
 
                     <NavLink to="/classroom" className="sidebar__link" activeClassName="sidebar__link--active">
                         <div className="sidebar__icon-wrapper">
-                            <FontAwesomeIcon icon={faUserCircle} />
+                            <FontAwesomeIcon icon={faUsers} />
                         </div>
                         <span className="sidebar__text">My classroom</span>
                         <div className="sidebar__icon-wrapper">
@@ -50,6 +45,16 @@ class Sidebar extends React.Component {
                             <FontAwesomeIcon icon={faGlobe} />
                         </div>
                         <span className="sidebar__text">Browse</span>
+                        <div className="sidebar__icon-wrapper">
+                            <FontAwesomeIcon icon={faCaretRight} className="sidebar__arrow"/>
+                        </div>
+                    </NavLink>
+
+                    <NavLink to="/profile" className="sidebar__link" activeClassName="sidebar__link--active">
+                        <div className="sidebar__icon-wrapper">
+                            <FontAwesomeIcon icon={faUserCircle} />
+                        </div>
+                        <span className="sidebar__text">Profile</span>
                         <div className="sidebar__icon-wrapper">
                             <FontAwesomeIcon icon={faCaretRight} className="sidebar__arrow"/>
                         </div>

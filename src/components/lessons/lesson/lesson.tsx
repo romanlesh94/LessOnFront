@@ -1,87 +1,68 @@
 import React from "react";
-import more from '../../../assets/more-icon-white.svg';
-import cover01 from '../../../assets/lesson-1.jpg';
-import cover02 from '../../../assets/lesson-2.jpg';
-import cover03 from '../../../assets/lesson-3.jpg';
-import {NavLink} from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faPlus} from "@fortawesome/free-solid-svg-icons";
+import AddExerciseWindow from "./add-exercise-window";
+import Cardset from "./cardset/cardset";
+import {getLessonService} from "../../../services/lesson-service";
+import ILesson from "../../../models/lesson-interface";
+import ICardset from "../../../models/cardset-interface";
 
-class Lesson extends React.Component {
+interface ILessonState {
+    isAddExerciseFormOpen: boolean,
+    lesson: ILesson,
+    id: number,
+}
+
+class Lesson extends React.Component<{
+    currentLessonId: number,
+    updateCurrentLesson: (id: number) => void,
+}>{
+
+    state: ILessonState = {
+        isAddExerciseFormOpen: false,
+        id: 0,
+        lesson: {
+            id: 0,
+            unitId: 0,
+            number: 0,
+            cardsets: [],
+        }
+    }
+
+    componentDidMount() {
+        let id = this.props.currentLessonId;
+        this.props.updateCurrentLesson(id);
+        console.log(id);
+        getLessonService(id).then(lesson => {
+            this.setState({lesson});
+        })
+    }
+
+
+    addExerciseFormToggle = () => {
+        this.setState({isAddExerciseFormOpen: !this.state.isAddExerciseFormOpen});
+    }
+
+    addOutsideClickCallback = (value: boolean) => {
+        this.setState({isAddExerciseFormOpen: value})
+    }
+
     render() {
         return (
-            <div className="lesson" >
-                <NavLink to="/units/l1/set1" className="lesson__exercise">
-                    <div >
-                        <div className="lesson__image-box">
-                            <img src={cover01} alt="" className="lesson__image"/>
-                            <div className="lesson__image-top"></div>
-                        </div>
-                        <div className="lesson__info">
-                            <h3 className="lesson__name">Learn</h3>
-                            <p className="lesson__text">Flashcards that will help you learn something new</p>
-                        </div>
-                        <img src={more} alt="" className="lesson__more"/>
-                    </div>
-                </NavLink>
-                
-                <div className="lesson__exercise">
-                    <div className="lesson__image-box">
-                        <img src={cover02} alt="" className="lesson__image"/>
-                        <div className="lesson__image-top"></div>
-                    </div>
-                    <div className="lesson__info">
-                        <h3 className="lesson__name">Practice</h3>
-                        <p className="lesson__text">Flashcards that will help you learn something new</p>
-                    </div>
-                    <img src={more} alt="" className="lesson__more"/>
-                </div>
-
-                <div className="lesson__exercise">
-                    <div className="lesson__image-box">
-                        <img src={cover03} alt="" className="lesson__image"/>
-                        <div className="lesson__image-top"></div>
-                    </div>
-                    <div className="lesson__info">
-                        <h3 className="lesson__name">Read</h3>
-                        <p className="lesson__text">Flashcards that will help you learn something new</p>
-                    </div>
-                    <img src={more} alt="" className="lesson__more"/>
-                </div>
-
-                <div className="lesson__exercise">
-                    <div className="lesson__image-box">
-                        <img src={cover03} alt="" className="lesson__image"/>
-                        <div className="lesson__image-top"></div>
-                    </div>
-                    <div className="lesson__info">
-                        <h3 className="lesson__name">Read</h3>
-                        <p className="lesson__text">Flashcards that will help you learn something new</p>
-                    </div>
-                    <img src={more} alt="" className="lesson__more"/>
-                </div>
-
-                <div className="lesson__exercise">
-                    <div className="lesson__image-box">
-                        <img src={cover03} alt="" className="lesson__image"/>
-                        <div className="lesson__image-top"></div>
-                    </div>
-                    <div className="lesson__info">
-                        <h3 className="lesson__name">Read</h3>
-                        <p className="lesson__text">Flashcards that will help you learn something new</p>
-                    </div>
-                    <img src={more} alt="" className="lesson__more"/>
-                </div>
-
-                <div className="lesson__exercise">
-                    <div className="lesson__image-box">
-                        <img src={cover03} alt="" className="lesson__image"/>
-                        <div className="lesson__image-top"></div>
-                    </div>
-                    <div className="lesson__info">
-                        <h3 className="lesson__name">Read</h3>
-                        <p className="lesson__text">Flashcards that will help you learn something new</p>
-                    </div>
-                    <img src={more} alt="" className="lesson__more"/>
-                </div>
+            <div className="lesson">
+                {
+                    this.state.lesson.cardsets?.map((cardset: ICardset) =>
+                        <Cardset cardset={cardset}/>
+                    )
+                }
+                <button onClick={this.addExerciseFormToggle} className="add-button">
+                    <FontAwesomeIcon icon={faPlus} className="add-button__plus"/>
+                </button>
+                <AddExerciseWindow
+                    isAddExerciseFormOpen={this.state.isAddExerciseFormOpen}
+                    addOutsideClickCallback={this.addOutsideClickCallback}
+                    lessonId={this.props.currentLessonId}
+                />
             </div>
         )
     }

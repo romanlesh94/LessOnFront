@@ -10,7 +10,6 @@ function Cards() {
     return (
         <div className="swiper-box">
             <Swiper
-                // install Swiper modules
                 modules={[Navigation, A11y]}
                 spaceBetween={50}
                 slidesPerView={1}

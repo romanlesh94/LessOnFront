@@ -1,24 +1,33 @@
 @import "components/auth/signup-page/signup-page.css";
 @import "components/auth/login-page/login-page.css";
 @import "components/menu/menu.css";
+@import "components/spinner/spinner.css";
 @import "components/sidebar/sidebar.css";
 @import "components/lessons/unit/unit.css";
 @import "components/lessons/lesson/lesson.css";
 @import "components/lessons/exercises/cards.css";
+@import "components/lessons/classroom/classroom.css";
+@import "components/profile/profile.css";
 
 * {
     box-sizing: border-box;
 }
+
 .button {
     background-color: white;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
     border: none;
+    cursor: pointer;
 }
+
 .button--active {
     background: linear-gradient(180deg, rgba(245, 78, 249, 0.47) 0%, #6F4DF5 100%);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
     border: none;
     color: white;
+    border-radius: 25px;
+    cursor: pointer;
 }
 
 .wrapper {
@@ -28,13 +37,16 @@
     width: 100%;
     height: 100vh;
 }
+
 .menu-container {
     grid-column-start: 1;
     grid-column-end: 2;
 }
+
 .sidebar-container {
     grid-row-start: 2;
 }
+
 .container {
     grid-row-start: 2;
     padding: 40px;

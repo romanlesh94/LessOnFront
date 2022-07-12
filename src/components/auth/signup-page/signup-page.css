@@ -111,9 +111,6 @@ body {
     .sign-wrapper {
         width: 960px;
     }
-    .button {
-        flex-basis: 45%;
-    }
 }
 
 @media (max-width: 960px) {

@@ -6,6 +6,9 @@
     margin: 0 auto;
     width: 1320px;
 }
+.inactive {
+    display: none;
+}
 .navbar-list {
     display: flex;
     list-style-type: none;

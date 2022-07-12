@@ -3,14 +3,11 @@ import './App.css';
 import LoginPage from "./components/auth/login-page/login-page";
 import SignupPage from "./components/auth/signup-page/signup-page";
 import HomePage from "./components/home-page";
-import UnitsPage from "./components/lessons/units-page";
-import {Switch, Route} from "react-router-dom";
-import LessonPage from "./components/lessons/lesson/lesson-page";
-import CardsPage from "./components/lessons/exercises/cards-page";
+import {Route, Switch} from "react-router-dom";
 
 function App() {
-    return (
 
+    return (
             <Switch>
                 <Route path="/log-in">
                     <LoginPage/>
@@ -20,31 +17,7 @@ function App() {
                     <SignupPage/>
                 </Route>
 
-                <Route exact path="/">
-                    <HomePage/>
-                </Route>
-
-                <Route exact path="/units">
-                    <UnitsPage/>
-                </Route>
-
-                <Route exact path="/units/l1">
-                    <LessonPage/>
-                </Route>
-
-                <Route exact path="/units/l1/set1">
-                    <CardsPage/>
-                </Route>
-
-                <Route path="/classroom">
-                    <HomePage/>
-                </Route>
-
-                <Route path="/articles">
-                    <HomePage/>
-                </Route>
-
-                <Route path="/browse">
+                <Route path="/">
                     <HomePage/>
                 </Route>
             </Switch>
@@ -52,3 +25,4 @@ function App() {
 }
 
 export default App;
+

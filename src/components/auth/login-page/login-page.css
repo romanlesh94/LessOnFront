@@ -93,7 +93,7 @@
     width: 100%;
 }
 
-.button {
+.button--auth {
     flex-basis: 45%;
     height: 50px;
 }
@@ -107,9 +107,6 @@
 @media (max-width: 1140px) {
     .login-wrapper {
         width: 960px;
-    }
-    .button {
-        flex-basis: 45%;
     }
 }
 

@@ -28,16 +28,16 @@
 .search::placeholder {
     color: #9F9F9F;
 }
-.user {
+.user-menu {
     height: 60px;
     display: flex;
 }
-.user__text {
+.user-menu__text {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.user__name {
+.user-menu__name {
     font-family: Golos;
     font-style: normal;
     font-weight: 500;
@@ -45,7 +45,7 @@
     line-height: 24px;
     color: white;
 }
-.user__role {
+.user-menu__role {
     font-family: Golos;
     font-style: normal;
     font-weight: 500;
@@ -53,13 +53,64 @@
     line-height: 18px;
     color: #BFBFBF;
 }
-.user__avatar {
+.user-menu__avatar {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     margin-left: 20px;
     object-fit: cover;
     border: 3px solid #f9f9f9;
+    cursor: pointer;
+}
+
+.profile-mini {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 100px;
+    width: 350px;
+    background-color: #fff;
+    padding: 35px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.profile-mini--inactive {
+    display: none;
+}
+
+.profile-mini__photo {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+    margin-bottom: 15px;
+}
+
+.profile-mini__name {
+    font-family: 'Golos';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #4F4F4F;
+}
+
+.profile-mini__email {
+    font-family: 'Golos';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #8A8A8A;
+}
+
+.profile-mini__button {
+    margin-top: 25px;
+    height: 50px;
+    width: 180px;
 }
 
 @media (max-width: 1140px) {

@@ -3,6 +3,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 15px;
 }
+
 .lesson a {
     text-decoration: none;
 }
@@ -11,20 +12,21 @@
     width: 100%;
     box-shadow: 0px 0px 22px 3px rgba(1, 1, 1, 0.15);
     position: relative;
-
 }
+
 .lesson__image-box {
     width: 100%;
     height: 200px;
     position: relative;
 }
+
 .lesson__image {
     z-index: 1;
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
+
 .lesson__image-top {
     position: absolute;
     top: 0;
@@ -35,14 +37,17 @@
 }
 
 .lesson__more {
-    height: 15px;
     position: absolute;
     top: 15px;
     right: 15px;
+    cursor: pointer;
+    color: #FFFFFF;
 }
+
 .lesson__info {
     padding: 15px;
 }
+
 .lesson__name {
     font-family: Golos;
     font-style: normal;
@@ -52,6 +57,7 @@
     color: #4F4F4F;
     margin: 0;
 }
+
 .lesson__text {
     font-family: Golos;
     font-style: normal;
@@ -62,10 +68,91 @@
     margin: 0;
 }
 
+.lesson__window {
+    position: absolute;
+    right: 15px;
+    top: 40px;
+    box-shadow: 0px 0px 22px 3px rgba(1, 1, 1, 0.15);
+}
+
+.lesson__buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 100px;
+    width: 150px;
+}
+
+.lesson__button {
+    flex-basis: 50%;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    color: #4F4F4F;
+}
+
+.lesson__button:hover {
+    background: linear-gradient(135deg, rgba(245, 78, 249, 0.47) 0%, rgba(162, 22, 165, 0.4) 100%);
+    color: #FFFFFF;
+}
+
+.lesson__window--is-closed {
+    display: none;
+}
+
+.add-exercise {
+    text-align: center;
+    width: 400px;
+    padding: 30px;
+    position: fixed;
+    right: 150px;
+    bottom: 150px;
+    box-shadow: 0px 0px 80px 30px rgba(1, 1, 1, 0.15);
+    background-color: #fff;
+}
+
+.add-exercise--is-closed {
+    display: none;
+}
+
+.add-exercise__title {
+    color: #4F4F4F;
+    font-family: Golos;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+}
+
+.add-exercise__button-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.add-exercise__button {
+    height: 40px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    color: #4F4F4F;
+    margin-bottom: 15px;
+}
+
+.add-exercise__button:hover {
+    background: linear-gradient(135deg, rgba(245, 78, 249, 0.47) 0%, rgba(162, 22, 165, 0.4) 100%);
+    color: #FFFFFF;
+}
+
+
+
 @media (max-width: 1200px) {
     .lesson {
         grid-template-columns: 1fr 1fr 1fr;
     }
+}
+@media (max-width: 860px) {
+
 }
 
 @media (max-width: 760px) {
@@ -73,8 +160,83 @@
         grid-template-columns: 1fr 1fr;
     }
 }
+
 @media (max-width: 560px) {
     .lesson {
         grid-template-columns: 1fr;
     }
+}
+
+
+.cardset__form-add {
+    left: 0;
+    top: 0;
+    transform: translateX(-110%);
+    width: 400px;
+    padding: 30px;
+    position: absolute;
+    box-shadow: 0px 0px 80px 30px rgba(1, 1, 1, 0.15);
+    background-color: #fff;
+    z-index: 99;
+}
+
+.cardset__form-add--closed {
+    display: none;
+}
+
+.cardset__form-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardset__form--is-closed {
+    display: none;
+}
+
+.cardset__input {
+    height: 40px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: #f2f2f2;
+    font-family: Golos;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    padding-left: 20px;
+}
+
+.cardset__form-title {
+    color: #4F4F4F;
+    font-family: Golos;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.cardset__submit {
+    margin-top: 10px;
+    min-height: 40px;
+}
+
+.cardset__button {
+    flex-basis: 50%;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    color: #4F4F4F;
+}
+
+.cardset__buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 100px;
+    width: 150px;
+}
+
+.cardset__button:hover {
+    background: linear-gradient(135deg, rgba(245, 78, 249, 0.47) 0%, rgba(162, 22, 165, 0.4) 100%);
+    color: #FFFFFF;
 }
